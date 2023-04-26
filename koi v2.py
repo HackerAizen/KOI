@@ -7,7 +7,7 @@ from email.message import EmailMessage
 import face_recognition
 
 # Загрузка классификатора Haar Cascade для распознавания инструмента
-tool_cascade = cv2.CascadeClassifier('tool_cascade.xml')
+tool_cascade = cv2.CascadeClassifier('cascade.xml')
 
 # Функция для отправки отчета на почту
 def send_email(image_path):
