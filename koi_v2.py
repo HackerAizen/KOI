@@ -5,6 +5,7 @@ import smtplib
 import imghdr
 from email.message import EmailMessage
 import face_recognition
+import time
 
 # Загрузка классификатора Haar Cascade для распознавания инструмента
 tool_cascade = cv2.CascadeClassifier('cascade.xml')
@@ -63,13 +64,14 @@ def recognize_face(frame, encodings, names):
 
 # Основной код
 cap = cv2.VideoCapture(0)
+cv2.startWindowThread()
 
 # Инициализация лицевых кодировок и имен для распознавания лиц
 encodings = []
 names = []
 
 # Загрузка фотографий и кодировок известных лиц
-known_face_names = ['John', 'Jane']
+known_face_names = ['nbekit1']
 for name in known_face_names:
     img = cv2.imread(f'{name}.jpg')
     rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -84,7 +86,6 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-
     # Обработка изображения для определения наличия инструмента на стенде
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, (11, 11), 0)
@@ -98,13 +99,18 @@ while True:
     for (x, y, w, h) in tools:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
+    cv2.imshow('frame', frame)
+
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+
 # Отображение результата
 cv2.imshow('Tool detection', frame)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 #получение текущей даты и времени для использования в именах файлов
-now = datetime.now()
+now = datetime.time()
 date_time = now.strftime("%Y-%m-%d_%H-%M-%S")
 
 #цикл по всем контурам
