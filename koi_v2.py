@@ -32,9 +32,9 @@ def send_email(image_path):
 # Функция для отправки уведомления о возврате инструмента на стенд
 def send_notification():
 
-    def send_email(to, subject, body):
-        gmail_user = "your_email@gmail.com" # замени на свой email
-        gmail_password = "your_password" # замени на свой пароль
+    def send_mail(to, subject, body):
+        gmail_user = "your_email@gmail.com" # заменить на свой email
+        gmail_password = "your_password" # заменить на свой пароль
         try:
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
