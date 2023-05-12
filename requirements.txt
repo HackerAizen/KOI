@@ -1,0 +1,6 @@
+cmake
+opencv-python
+cmake
+torch
+face_recognition
+torchvision
