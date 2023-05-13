@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+    <title>Index Page</title>
+</head>
+<body>
+    <div class="login-form">
+        <div class="pop-up">
+            <input type="text" class="input">
+            <input type="password" class="input">
+            <button class="submit">Войти</button>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div style="font-size:35px;">KOI</div>
+        <img src="andrew.jpg" alt="" class="profile-picture">
+        <img src="icons/logout.png" alt=Выйти">
+    </div>
+    <div class="main">
+        <div class="options-list">
+            <span class="header">Управление</span>
+            <div class="button">
+                <div class="circle">
+                    <img src="icons/tools.png" alt="">
+                </div>
+                <span>Инструменты</span>
+            </div>
+            <div class="button">
+                <div class="circle">
+                    <img src="icons/report.png" alt="">
+                </div>
+                <span>Отчеты</span>
+            </div>
+            <span class="header">Инструменты</span>
+            <div class="button">
+                <div class="circle">
+                    <img src="icons/add.png" alt="">
+                </div>
+                <span>Добавить новый</span>
+            </div>
+            <div class="button">
+                <div class="circle">
+                    <img src="icons/stats.png">
+                </div>
+                <span>Статистика</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.submit').addEventListener('click', function (e) {
+            console.log(1)
+            document.querySelector('.login-form').style.display = 'none'
+        })
+    </script>
+</body>
+</html>

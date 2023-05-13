@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > * {
+    margin: 0;
+}
+
+.login-form {
+    background-color: rgba(50, 50, 50, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.login-form > * > * {
+    margin-bottom: 20px;
+}
+.submit {
+    background-color: #c71232;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    line-height: 1.3rem;
+    padding: 10px;
+    width: 100px;
+    transition: 100ms;
+}
+.submit:hover {
+    background-color: #810c21;
+}
+.pop-up {
+    background-color: white;
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input {
+    transition: 100ms;
+    border: solid 3px white;
+    border-radius: 25px;
+    line-height: 1.2rem;
+    padding: 10px;
+    font-size: large;
+}
+.input:hover {
+    border-color: #c71232;
+}
+.profile-picture {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin-left: auto;
+}
+
+.top-bar {
+    color: white;
+    height: 60px;
+    background-color: #c71232;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.options-list{
+    margin: auto auto;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 50px 1fr;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px lightgrey;
+    width: auto;
+    height: 400px;
+    margin: 15px 15px;
+    padding: 25px 15px;
+}
+
+.options-list > * {
+    margin-bottom: 10px;
+}
+
+span.header {
+    font-weight: bolder;
+    font-size: larger;
+    grid-column: 1 / 3;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button > img {
+    width: 50px;
+    height: 50px;
+}
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px white;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px lightgrey;
+    transition: 100ms;
+    margin-bottom: 5px;
+}
+
+.circle:hover {
+    border-color: #c71232;
+}
